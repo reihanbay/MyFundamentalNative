@@ -5,15 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import com.google.android.material.button.MaterialButton
 import com.learn.fundamental.customview.MyCustomViewActivity
 import com.learn.fundamental.databinding.ActivityMainBinding
 import com.learn.fundamental.mybackgroundthread.MyBackgroundThreadActivity
 import com.learn.fundamental.myfragment.MyFragmentActivity
 import com.learn.fundamental.myintent.MyIntentActivity
 import com.learn.fundamental.mylistview.MyListViewActivity
-import com.learn.fundamental.mynavigation.MyNavigationActivity
 import com.learn.fundamental.myrecyclerview.RecyclerViewActivity
+import com.learn.fundamental.myservice.MyServiceActivity
 import com.learn.fundamental.mytesting.MyUnitTestingActivity
 import com.learn.fundamental.myviewsandviewg.MyViewAndViewGroupActivity
 
@@ -44,6 +43,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         bind?.btnNavigationComponent?.btn?.text = "Navigation Component"
         bind?.btnBackgroundThread?.btn?.setOnClickListener(this)
         bind?.btnBackgroundThread?.btn?.text = "BackgroundThread"
+        bind?.btnService?.btn?.setOnClickListener(this)
+        bind?.btnService?.btn?.text = "Service"
     }
 
     override fun onClick(v: View?) {
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_testing -> startActivity(Intent(this@MainActivity, MyUnitTestingActivity::class.java))
             R.id.btn_customview -> startActivity(Intent(this@MainActivity, MyCustomViewActivity::class.java))
             R.id.btn_background_thread -> startActivity(Intent(this@MainActivity, MyBackgroundThreadActivity::class.java))
+            R.id.btn_service -> startActivity(Intent(this@MainActivity, MyServiceActivity::class.java))
         }
     }
 }

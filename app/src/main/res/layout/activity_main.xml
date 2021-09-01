@@ -47,5 +47,10 @@
             android:id="@+id/btn_background_thread"
             />
 
+        <include layout="@layout/component_button"
+            android:id="@+id/btn_service"
+            />
+
+
     </LinearLayout>
 </ScrollView>
